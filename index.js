@@ -2,13 +2,15 @@
 const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'bobby']
 function findMatching ( driversArray, name )
 {
-    return driversArray.filter( item => item.toUpperCase() === name.toUpperCase())
+    const resultFindMatching = driversArray.filter( item => item.toUpperCase() === name.toUpperCase())
 }
 function fuzzyMatch ( driversArray, name )
 {
-    return driversArray.filter(item => item.toUpperCase().indexOf(name.toUpperCase()) === 0)
+    const resultFuzzyMatch = driversArray.filter( item => item.toUpperCase().indexOf( name.toUpperCase() ) === 0 );
+    return resultFuzzyMatch;
 }
 function matchName ( driversArray, string )
 {
-    return driversArray.filter(item => item.name === string)
+    const resultMatchName = driversArray.filter((item) => item.name === string);
+    return resultMatchName;
 }
